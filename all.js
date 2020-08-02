@@ -7,6 +7,9 @@ VeeValidate.localize('tw', zh_TW);
 // input 驗證
 Vue.component('ValidationProvider', VeeValidate.ValidationProvider);
 
+// form 驗證
+Vue.component('ValidationObserver', VeeValidate.ValidationObserver);
+
 // 自定義設定檔案，錯誤的 className
 VeeValidate.configure({
   classes: {
@@ -25,5 +28,10 @@ new Vue({
       address: '',
       payment: '',
     }
-  }
+  },
+  methods: {
+    sendForm() {
+      console.log("已送出表單");
+    }
+  },
 })
