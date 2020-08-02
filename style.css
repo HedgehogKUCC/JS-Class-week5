@@ -1,0 +1,4 @@
+label:not([for="message"])::after {
+  content: '*';
+  color: red;
+}
